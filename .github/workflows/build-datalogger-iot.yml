@@ -86,7 +86,7 @@ jobs:
       #     mv sfeDataLoggerIoT.ino.bin SparkFun_DataLoggerIoT.bin
 
       # Upload the build files - bootloader, paritions, firmware
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: sfeDataLoggerIoT-build
           path: sfeDataLoggerIoT/build/esp32.esp32.esp32/sfeDataLoggerIoT.ino*.bin
@@ -107,7 +107,7 @@ jobs:
           cd fuse_id
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Flash ID CLI Tool
           path: fuse_id/dist
@@ -116,7 +116,7 @@ jobs:
       # - name: Build product burn config file
       #   run: ./fuse_id/dl_build_conf.py
 
-      # - uses: actions/upload-artifact@v3
+      # - uses: actions/upload-artifact@v4
       #   with:
       #     name: SparkFunProductionConfig
       #     path: dl_fuseid.conf
